@@ -23,8 +23,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--num_iter', type=int, default=2500, help='number of epochs of training')
 parser.add_argument('--img_size', type=int, default=[256, 256], help='size of each image dimension')
 parser.add_argument('--kernel_size', type=int, default=[21, 21], help='size of blur kernel [height, width]')
-parser.add_argument('--data_path', type=str, default="datasets/lai/uniform_ycbcr/", help='path to blurry image')
-parser.add_argument('--save_path', type=str, default="results/lai/uniform", help='path to save results')
+parser.add_argument('--data_path', type=str, default="datasets/lai/greyscale/", help='path to blurry image')
+parser.add_argument('--save_path', type=str, default="results/lai/greyscale", help='path to save results')
 parser.add_argument('--save_frequency', type=int, default=100, help='lfrequency to save results')
 opt = parser.parse_args()
 #print(opt)
@@ -36,8 +36,8 @@ dtype = torch.cuda.FloatTensor
 warnings.filterwarnings("ignore")
 
 
-#files_source = glob.glob(os.path.join(opt.data_path, '*.png'))
-files_source = glob.glob(os.path.join(opt.data_path, 'manmade_02_kernel_01.png'))
+files_source = glob.glob(os.path.join(opt.data_path, '*.png'))
+#files_source = glob.glob(os.path.join(opt.data_path, 'manmade_02_kernel_01.png'))
 files_source.sort()
 save_path = opt.save_path
 os.makedirs(save_path, exist_ok=True)

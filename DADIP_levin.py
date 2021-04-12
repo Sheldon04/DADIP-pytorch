@@ -23,7 +23,7 @@ parser.add_argument('--num_iter', type=int, default=3000, help='number of epochs
 parser.add_argument('--img_size', type=int, default=[256, 256], help='size of each image dimension')
 parser.add_argument('--kernel_size', type=int, default=[21, 21], help='size of blur kernel [height, width]')
 parser.add_argument('--data_path', type=str, default="datasets/levin/", help='path to blurry image')
-parser.add_argument('--save_path', type=str, default="results/levin/se2/", help='path to save results')
+parser.add_argument('--save_path', type=str, default="results/levin/", help='path to save results')
 parser.add_argument('--save_frequency', type=int, default=500, help='lfrequency to save results')
 opt = parser.parse_args()
 #print(opt)
